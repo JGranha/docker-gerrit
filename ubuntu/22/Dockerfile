@@ -28,10 +28,13 @@ USER gerrit
 
 ENV CANONICAL_WEB_URL=
 ENV HTTPD_LISTEN_URL=
+ENV SERVER_ID=
+ENV INSTANCE_ID=
+ENV AUTH_MODE=
 
 # Allow incoming traffic
-EXPOSE 29418 8080
+EXPOSE 29418 8080 5005
 
-VOLUME ["/var/gerrit/git", "/var/gerrit/index", "/var/gerrit/cache", "/var/gerrit/db", "/var/gerrit/etc"]
+VOLUME ["/var/gerrit/git", "/var/gerrit/index", "/var/gerrit/cache", "/var/gerrit/db", "/var/gerrit/etc", "/var/gerrit/plugins", "/var/gerrit/lib", "/var/gerrit/logs", "/var/gerrit/data", "/var/gerrit/db"]
 
 ENTRYPOINT ["/entrypoint.sh"]
