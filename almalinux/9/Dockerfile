@@ -1,5 +1,5 @@
 FROM almalinux:9.4
-MAINTAINER Gerrit Code Review Community
+LABEL maintainer="Gerrit Code Review Community"
 
 # Add Gerrit packages repository
 RUN rpm -i https://gerritforge.com/gerritforge-repo-1-4.noarch.rpm

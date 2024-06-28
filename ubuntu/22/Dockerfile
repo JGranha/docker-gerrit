@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jammy
-MAINTAINER Gerrit Code Review Community
+LABEL maintainer="Gerrit Code Review Community"
 
 # Add Gerrit packages repository
 RUN apt-get update && \

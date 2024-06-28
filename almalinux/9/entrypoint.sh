@@ -21,7 +21,7 @@ then
   if [ -n "$INSTANCE_ID" ];  then
     git config -f /var/gerrit/etc/gerrit.config --add gerrit.instanceId "${INSTANCE_ID}"
   fi
-  java $JAVA_OPTS -jar /gerrit.war init --batch --no-auto-start --install-all-plugins --dev -d /var/gerrit
+  java $JAVA_OPTS -jar /var/gerrit/bin/gerrit.war init --batch --no-auto-start --install-all-plugins --dev -d /var/gerrit
   sleep 10
   java $JAVA_OPTS -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
 fi
